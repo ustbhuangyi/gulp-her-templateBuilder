@@ -1,0 +1,32 @@
+{
+  "name": "gulp-her-templateBuilder",
+  "version": "0.0.1",
+  "description": "template builder include replaceScriptTag、expandPath、analyseScript and defineWidget for tpl files",
+  "author": {
+    "name": "huangyi",
+    "email": "ustbhuangyi@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/ustbhuangyi/gulp-her-templateBuilder/issues"
+  },
+  "engines": {
+    "node": ">=0.9"
+  },
+  "homepage": "https://github.com/ustbhuangyi/gulp-her-templateBuilder/",
+  "keywords": [
+    "gulpplugin",
+    "her",
+    "template",
+    "builder"
+  ],
+  "licenses": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ustbhuangyi/gulp-her-templateBuilder.git"
+  },
+  "dependencies": {
+    "gulp-util": ">=3.0.0 <4.0.0-0",
+    "through2": ">=0.6.1 <1.0.0-0"
+  }
+}
