@@ -51,8 +51,8 @@ function createError(file, err) {
 //replaceScriptTag
 //eg: <script runat="server"></script> => {script}{/script}
 module.exports.replaceScriptTag = function (opt) {
-  var smarty_left_delimiter = (opt && opt.smarty_left_delimiter) || '{';
-  var smarty_right_delimiter = (opt && opt.smarty_right_delimiter) || '}';
+  var smarty_left_delimiter = her.config.get('setting.smarty.left_delimiter') || '{';
+  var smarty_right_delimiter = her.config.get('setting.smarty.right_delimiter') || '}';
 
   function replace(file, encoding, callback) {
 
@@ -94,8 +94,8 @@ module.exports.replaceScriptTag = function (opt) {
 
 // expand the relative path to the abosulte path
 module.exports.expandPath = function (opt) {
-  var smarty_left_delimiter = (opt && opt.smarty_left_delimiter) || '{';
-  var smarty_right_delimiter = (opt && opt.smarty_right_delimiter) || '}';
+  var smarty_left_delimiter = her.config.get('setting.smarty.left_delimiter') || '{';
+  var smarty_right_delimiter = her.config.get('setting.smarty.right_delimiter') || '}';
 
   function expand(file, encoding, callback) {
 
@@ -216,8 +216,8 @@ module.exports.expandPath = function (opt) {
 
 //analyse require、require.async、require、defer calls between {script} and {/script} and make it to the {script} dependeces
 module.exports.analyseScript = function (opt) {
-  var smarty_left_delimiter = (opt && opt.smarty_left_delimiter) || '{';
-  var smarty_right_delimiter = (opt && opt.smarty_right_delimiter) || '}';
+  var smarty_left_delimiter = her.config.get('setting.smarty.left_delimiter') || '{';
+  var smarty_right_delimiter = her.config.get('setting.smarty.right_delimiter') || '}';
 
   function analyse(file, encoding, callback) {
 
@@ -316,8 +316,8 @@ module.exports.analyseScript = function (opt) {
 
 //The main purpose of the defineWidget is to establish the relationship between files and the corresponding function call by {widget}
 module.exports.defineWidget = function (opt) {
-  var smarty_left_delimiter = (opt && opt.smarty_left_delimiter) || '{';
-  var smarty_right_delimiter = (opt && opt.smarty_right_delimiter) || '}';
+  var smarty_left_delimiter = her.config.get('setting.smarty.left_delimiter') || '{';
+  var smarty_right_delimiter = her.config.get('setting.smarty.right_delimiter') || '}';
 
   function define(file, encoding, callback) {
 
